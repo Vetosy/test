@@ -1,3 +1,37 @@
-<header class="header">
-  <div class="container"></div>
+<header class="header header--main">
+  <div class="header__container container">
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
+    <div class="header__left">
+      <a class="header__logo logo">
+        <svg>
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <address class="header__address">
+        <span class="header__city">Ростов-на-Дону</span>
+        <span class="header__street">ул. Ленина, 2Б</span>
+      </address>
+    </div>
+    <div class="header__right">
+      <a class="header__link" href="tel:+78630000000">+78630000000</a>
+      <span class="header__hidden" aria-hidden="true">Ростов-на-Дону</span>
+      <button class="header__btn btn btn-reset" data-menu data-graph-animation="custom" data-graph-path="first"
+        aria-label="Записаться на прием">Записаться на прием</button>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="header__bottom-container container">
+      <nav class="header__nav nav" title="Основное меню" data-menu>
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="#" class="nav__link">О клинике</a></li>
+          <li class="nav__item"><a href="#services" data-scroll data-menu-item class="nav__link">Услуги</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Специалисты</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Цены</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>

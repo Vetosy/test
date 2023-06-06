@@ -111,3 +111,30 @@ a {
   grid-template-rows: repeat(12, 1fr);
   gap: 30px;
 }
+
+.logo {
+  svg {
+    width: 91px;
+    height: 27px;
+    object-fit: cover;
+  }
+}
+
+.burger {
+  @include burger;
+
+  display: none;
+  --burger-width: 37px;
+  --burger-height: 26px;
+  --burger-line-height: 4px;
+  color: var(--junglegreen-color);
+  z-index: 101;
+
+  @include small-tablet {
+    display: block;
+  }
+
+  @include mobile {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,73 @@
+.services-modal {
+  .graph-modal__container {
+    width: 600px;
+
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 49px;
+    text-transform: uppercase;
+    color: var(--capecod-color);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    @include mb(30px);
+  }
+
+  &__input {
+    padding: 20px;
+    width: 100%;
+    border-bottom: 1px solid var(--disabled-color);
+
+    &:focus {
+      outline: 2px solid var(--caribbean-color);
+      outline-offset: 4px;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  &__policy {
+    margin: 0;
+  }
+
+  &__link {
+    color: var(--junglegreen-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+
+    &:focus {
+      outline: 2px solid var(--capecod-color);
+      outline-offset: 4px;
+    }
+
+    @include hover {
+      color: var(--caribbean-color);
+    }
+
+    &:active {
+      color: var(--gray-color);
+    }
+  }
+}

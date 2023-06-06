@@ -2,11 +2,20 @@
 // colors
 :root {
   // base
-  --font-family: "Gilroy", sans-serif;
-  --content-width: 1170px;
+  --font-family: "PTSansCaption", sans-serif;
+  --second-family: "Ubuntu", sans-serif;
+  --content-width: 1138px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
   --light-color: #fff;
+  --accent-color: #0dbc91;
+  --capecod-color: #364844;
+  --gray-color: #868686;
+  --aqua-color: #e2f0ef;
+  --junglegreen-color: #1fa181;
+  --disabled-color: #c0c0c0;
+  --watercourse-color: #08664F;
+  --caribbean-color: #00d29f;
 }

@@ -1,0 +1,51 @@
+.footer {
+  padding: 50px 0;
+  background-color: var(--watercourse-color);
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__container {
+    @include flex-all-sb;
+    flex-wrap: wrap;
+  }
+
+  &__nav {
+    @include small-tablet {
+      order: 2;
+    }
+  }
+
+  .nav__link {
+    &:focus {
+      outline: 2px solid var(--light-color);
+      outline-offset: 4px;
+    }
+
+    @include hover {
+      color: var(--disabled-color);
+    }
+  }
+
+  &__logo {
+    svg {
+      fill: var(--light-color);
+    }
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-item {
+    @include mr(15px);
+  }
+
+  &__social-link {
+    &:focus {
+      outline: 2px solid var(--light-color);
+      outline-offset: 4px;
+    }
+  }
+}

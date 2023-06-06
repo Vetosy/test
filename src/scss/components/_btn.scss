@@ -1,0 +1,27 @@
+.btn {
+  display: inline-block;
+  max-width: 196px;
+  padding: 11px 23px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--light-color);
+  background-color: var(--accent-color);
+  border-radius: 50px;
+  text-transform: initial;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:focus {
+    outline: 2px solid var(--capecod-color);
+    outline-offset: 4px;
+  }
+
+  @include hover {
+    color: var(--light-color);
+    background-color: var(--caribbean-color);
+  }
+
+  &:active {
+    background-color: var(--capecod-color);
+  }
+}

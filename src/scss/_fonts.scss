@@ -1,1 +1,4 @@
-// @include font-face("Gilroy", "../fonts/GilroyRegular", 400, normal);
+@include font-face("PTSansCaption", "../fonts/PTSansCaptionRegular", 400, normal);
+@include font-face("PTSansCaption", "../fonts/PTSansCaptionBold", 700, normal);
+@include font-face("Ubuntu", "../fonts/UbuntuRegular", 400, normal);
+@include font-face("Ubuntu", "../fonts/UbuntuBold", 700, normal);

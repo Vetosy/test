@@ -1,0 +1,55 @@
+.hero {
+  &__wrapper {
+    @include flex-all-sb;
+
+    padding-left: max(15px, (100% - var(--content-width)) / 2);
+
+    @include tablet {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  &__content {
+    max-width: 416px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    color: var(--capecod-color);
+
+    @include mobile {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--capecod-color);
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__image {
+    display: block;
+
+    @include tablet {
+      margin-bottom: 35px;
+    }
+  }
+}

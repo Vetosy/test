@@ -1,0 +1,233 @@
+.services {
+  padding-top: 100px;
+  padding-bottom: 160px;
+  background-color: var(--light-color);
+
+  @include mobile {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: var(--aqua-color);
+
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    position: relative;
+    max-width: 409px;
+    width: 100%;
+    padding: 53px 0 56px 63px;
+    flex-grow: 1;
+    z-index: 1;
+
+    @include small-tablet {
+      max-width: 100%;
+      width: auto;
+      padding: 22px 30px 42px 23px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -80px;
+      width: 100%;
+      height: 100%;
+      background-color: var(--aqua-color);
+      transform: skew(15deg);
+      z-index: -1;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 49px;
+    text-transform: uppercase;
+    color: var(--capecod-color);
+
+    @include mobile {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+
+  &__text {
+    display: block;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: initial;
+    color: currentColor;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    @include mb(8px);
+
+    position: relative;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--capecod-color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 7px;
+      height: 7px;
+      background-color: var(--junglegreen-color);
+      border-radius: 100%;
+    }
+  }
+
+  &__price {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  &__price-new {
+    margin-right: 16px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--capecod-color);
+  }
+
+  &__price-old {
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration-line: line-through;
+    color: var(--gray-color);
+  }
+
+  &__btns {
+    display: flex;
+  }
+
+  &__action {
+    @include mr(14px);
+
+    width: 100%;
+    text-align: center;
+
+    &--link {
+      background-color: transparent;
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    @include mobile {
+      @include mr(8px);
+    }
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__nav-btn {
+    @include flex-all-sb;
+
+    position: absolute;
+    bottom: -68px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 169px;
+    height: 34px;
+
+    .swiper-button-disabled {
+      pointer-events: none;
+
+      svg {
+        fill: var(--disabled-color);
+      }
+    }
+  }
+
+  &__nav-btn__prev {
+    z-index: 100;
+
+    svg {
+      width: 34px;
+      height: 34px;
+      object-fit: cover;
+      fill: var(--capecod-color);
+    }
+
+    &:focus {
+      outline: 2px solid var(--watercourse-color);
+      outline-offset: 4px;
+    }
+  }
+
+  &__nav-btn__next {
+    z-index: 100;
+
+    svg {
+      width: 34px;
+      height: 34px;
+      object-fit: cover;
+      fill: var(--capecod-color);
+    }
+
+    &:focus {
+      outline: 2px solid var(--watercourse-color);
+      outline-offset: 4px;
+    }
+  }
+
+  &__nav-pag {
+    bottom: 50%;
+    transform: translateY(50%);
+
+    .swiper-pagination-current {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      color: var(--capecod-color);
+    }
+
+    .swiper-pagination-total {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      color: var(--disabled-color);
+    }
+  }
+}
