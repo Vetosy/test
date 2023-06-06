@@ -1,24 +1,17 @@
-import {
-  disableScroll
-} from '../functions/disable-scroll';
-import {
-  enableScroll
-} from '../functions/enable-scroll';
+import { disableScroll } from '../functions/disable-scroll';
+import { enableScroll } from '../functions/enable-scroll';
 
-(function () {
+(function(){
   const burger = document?.querySelector('[data-burger]');
+  const menu = document?.querySelector('[data-menu]');
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
+    menu?.classList.toggle('menu--active');
 
-    const menuElements = document?.querySelectorAll('[data-menu]');
-    menuElements?.forEach(element => {
-      element.classList.toggle('menu--active');
-    });
-
-    if (burger?.classList.contains('burger--active')) {
+    if (menu?.classList.contains('menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
       burger?.setAttribute('aria-label', 'Закрыть меню');
       disableScroll();
@@ -33,12 +26,7 @@ import {
     burger?.setAttribute('aria-expanded', 'false');
     burger?.setAttribute('aria-label', 'Открыть меню');
     burger.classList.remove('burger--active');
-
-    const menuElements = document?.querySelectorAll('[data-menu]');
-    menuElements?.forEach(element => {
-      element.classList.remove('menu--active');
-    });
-
+    menu.classList.remove('menu--active');
     enableScroll();
   });
 
@@ -47,12 +35,7 @@ import {
       burger?.setAttribute('aria-expanded', 'false');
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
-
-      const menuElements = document?.querySelectorAll('[data-menu]');
-      menuElements?.forEach(element => {
-        element.classList.remove('menu--active');
-      });
-
+      menu.classList.remove('menu--active');
       enableScroll();
     });
   });

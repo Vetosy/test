@@ -66,21 +66,18 @@
   &__btn {
     @include small-tablet {
       display: none;
-      transform: translateY(-100%);
-      transition: transform 0.3s ease;
+    }
 
-      &.menu--active {
+    &--hidden {
+      display: none;
+
+      @include small-tablet {
         display: block;
-        position: fixed;
-        top: 60%;
-        left: 19px;
-        transform: none;
         font-weight: 700;
         font-size: 14px;
         line-height: 21px;
         background-color: var(--light-color);
         color: var(--junglegreen-color);
-        z-index: 1000;
       }
     }
   }
@@ -158,6 +155,7 @@
     .nav__list {
       @include small-tablet {
         padding: 0;
+        margin-bottom: 40px;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
