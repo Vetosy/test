@@ -1,6 +1,5 @@
 :root {
   --font-family: "PTSansCaption", sans-serif;
-  --second-family: "Ubuntu", sans-serif;
   --content-width: 1138px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
@@ -11,7 +10,7 @@
   --aqua-color: #e2f0ef;
   --junglegreen-color: #1fa181;
   --disabled-color: #c0c0c0;
-  --watercourse-color: #08664F;
+  --watercourse-color: #08664f;
   --caribbean-color: #00d29f;
 }
 
@@ -41,20 +40,6 @@
 @font-face {
   font-family: "PTSansCaption";
   src: url("../fonts/../fonts/PTSansCaptionBold.woff2") format("woff2");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/../fonts/UbuntuRegular.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/../fonts/UbuntuBold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -633,6 +618,10 @@ a {
   transform: none;
 }
 
+.hero {
+  background-color: var(--light-color);
+  min-height: 533px;
+}
 .hero__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
